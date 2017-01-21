@@ -46,3 +46,9 @@ services:
 networks:
     selenium_grid_internal:
 ```
+
+# Launch commands
+```bash
+xhost +local:root
+nvidia-docker-compose up -d
+```
