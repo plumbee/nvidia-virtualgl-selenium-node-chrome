@@ -1,5 +1,5 @@
 # nvidia-virtualgl-selenium-node-chrome
-Selenium node running Chrome v55.
+Selenium node running Chrome v56.
 VirtualGL is used to enable hardware accelerated WebGL content.
 
 This image is intended to be used via a selenium/hub instance, see below for a basic setup.
@@ -27,7 +27,7 @@ services:
             - selenium_grid_internal
 
     nodechrome:
-        image: plumbee/nvidia-virtualgl-selenium-node-chrome
+        image: plumbee/nvidia-virtualgl-selenium-node-chrome:56.0
         depends_on:
             - selenium_hub
         ports:
