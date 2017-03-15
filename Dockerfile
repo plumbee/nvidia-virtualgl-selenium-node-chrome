@@ -5,7 +5,7 @@ USER root
 #=========
 # Google Chrome
 #=========
-ARG CHROME_VERSION="google-chrome-stable=56.0.2924.87-1"
+ARG CHROME_VERSION="google-chrome-stable=57.0.2987.98-1"
 RUN apt-get update -qqy && apt-get install -qqy wget \
   && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
