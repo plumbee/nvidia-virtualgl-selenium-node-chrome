@@ -15,7 +15,7 @@ version: '2'
 
 services:
     selenium_hub:
-        image: selenium/hub:3.0.1-aluminum
+        image: selenium/hub:3.7.1-beryllium
         container_name: selenium_hub
         privileged: true
         ports:
@@ -27,7 +27,7 @@ services:
             - selenium_grid_internal
 
     nodechrome:
-        image: plumbee/nvidia-virtualgl-selenium-node-chrome
+        image: treyturner/nvidia-virtualgl-selenium-node-chrome
         depends_on:
             - selenium_hub
         ports:
