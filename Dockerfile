@@ -5,7 +5,7 @@ USER root
 #=========
 # Google Chrome
 #=========
-ARG CHROME_VERSION="google-chrome-stable=62.0.3202.94-1"
+ARG CHROME_VERSION="google-chrome-stable=63.0.3239.132-1"
 RUN apt-get update -qqy && apt-get install -qqy wget \
   && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
@@ -18,7 +18,7 @@ RUN apt-get update -qqy && apt-get install -qqy wget \
 #==================
 # Chrome webdriver
 #==================
-ARG CHROME_DRIVER_VERSION=2.33
+ARG CHROME_DRIVER_VERSION=2.35
 RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
   && rm -rf /opt/selenium/chromedriver \
   && unzip /tmp/chromedriver_linux64.zip -d /opt/selenium \
